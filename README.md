@@ -123,6 +123,6 @@ O programa espera encontrar os seguintes arquivos **no mesmo diretório do execu
 
 ---
 
-📍 **Autor:** *José e Pedro Groner*  
+📍 **Autores:** *José Otávio e Pedro Groner*  
 
 
