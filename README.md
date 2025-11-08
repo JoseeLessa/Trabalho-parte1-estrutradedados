@@ -88,7 +88,7 @@ Execute o binário diretamente:
 
 ---
 
-## 💡 Arquivos de Dados
+## Arquivos de Dados
 
 O programa espera encontrar os seguintes arquivos **no mesmo diretório do executável**:
 
