@@ -39,8 +39,9 @@ O projeto é estruturado de forma **modular**, separando a lógica principal, a 
 #### `campeonato.c`
 **Propósito:** O “core” da aplicação.  
 **Responsabilidades:**  
-- Implementa toda a **lógica de negócio**.  
+- Implementa toda a **lógica do programa**.  
 - Carrega arquivos, calcula pontos, processa buscas e formata a tabela de classificação.
+- Funções de exibição e UI do usuário estão nesse arquivo.
 
 #### `utils.h`
 **Propósito:** Caixa de ferramentas de utilitários.  
@@ -58,7 +59,7 @@ O projeto é estruturado de forma **modular**, separando a lógica principal, a 
 
 ---
 
-## 🛠️ Como Compilar e Executar
+## Como Compilar e Executar
 
 ### 1. Requisitos
 - Compilador **gcc**  
@@ -92,30 +93,13 @@ Execute o binário diretamente:
 O programa espera encontrar os seguintes arquivos **no mesmo diretório do executável**:
 
 - `times.csv`
+- `partidas_vazio.csv`
 - `partidas_parcial.csv`
+- `partidas_completo.csv`
 
-> ⚠️ Os nomes e caminhos desses arquivos estão definidos em `main.c`.  
-> Caso deseje usar outros nomes, altere as variáveis `teams_path` e `matches_path` antes de compilar.
-
----
-
-## 🧠 Conceitos Técnicos Aplicados
-
-- **Modularidade:**  
-  A lógica é separada da interface.  
-  `main.c` lida com o *“o quê”* (menu), enquanto `campeonato.c` lida com o *“como”* (lógica).
-
-- **Tipos Abstratos de Dados (TADs):**  
-  Estruturas como `Team` e `Partida` encapsulam os dados, e funções como `team_points` e `team_add_match` operam sobre elas.
-
-- **Gerenciamento de Memória:**  
-  Uso de `malloc` em `main.c` para alocar dinamicamente as estruturas principais, passadas por ponteiros entre módulos.
-
-- **Manipulação de Arquivos:**  
-  Uso de `fopen`, `fgets` e `sscanf` em `campeonato.c` para ler e interpretar arquivos `.csv` linha a linha.
-
-- **Funções Utilitárias:**  
-  O arquivo `utils.h` demonstra o uso de funções `static inline` para otimizar operações comuns sem necessidade de um `.c` separado.
+> Os nomes e caminhos desses arquivos estão definidos em `main.c`.  
+> Caso deseje usar outro arquivo, escolhar entre 1, 2 e 3 durante a execução do aplicativo.
+> O arquivo `times.csv` é obrigatório para a execução do código, não podendo assim ser alterado.
 
 ---
 
